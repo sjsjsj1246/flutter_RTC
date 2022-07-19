@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rtc/screens/camScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -77,7 +78,10 @@ class _EntryButton extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => CamScreen()));
+          },
           child: Text('입장하기'),
         )
       ],
